@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'org.postgresql:postgresql:42.2.18'
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'org.slf4j:slf4j-api:1.7.5'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.5'
+}
+
+applicationDefaultJvmArgs = ['-Djdk.tls.client.protocols=TLSv1.2']
+
+mainClassName = "example.Main"
